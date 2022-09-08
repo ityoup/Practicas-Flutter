@@ -1,4 +1,8 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
+import 'package:practica/milista.dart';
+import 'package:practica/listview2.dart';
 
 void main() => runApp(const MyApp());
 
@@ -8,45 +12,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Conociendo scaffold',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        brightness: Brightness.light
-      ),
+      title: 'Material App',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Conociendo Scaffold'),
+          title: const Text('Material App Bar'),
         ),
-        body: const Center(
-          child: Text('Estamos en el body'),
-        ),
-        floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.red.shade300,
-          tooltip: 'grabar',
-          mini: false,
-          
-          onPressed: (){
-
-          },
-        child: Icon(Icons.save),
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.blueAccent,
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person,size: 50, color:
-               Colors.black,),
-               label: 'Persona'
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.camera_alt_outlined),
-                label: 'Camara'
-              ),
-          ],
-
-        ),
+        body: MyListView2(), MiLista(),
       ),
     );
-  }
-}
+    
+  }//Fin del metodo build
+}//Fin de la clase MyApp
