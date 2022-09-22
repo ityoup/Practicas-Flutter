@@ -9,16 +9,26 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Fonts',
+      title: 'Imagenes',
       home: Scaffold(
         appBar: AppBar(
-          
-          title: const Text('Tipografia Google'),
+          title: const Text('Manejo de imagenes'),
         ),
-        body: const Center(
-          child: Text('La tipografía es el arte de diseñar letras'),
+        body: Center(
+          child: Container(
+            child: Column(
+              children: [
+                Expanded(
+                  child: Image.asset("assets/imagenes/chica.jpg"),
+                  ),
+                  Expanded
+                  (child: Image(image: NetworkImage("https://images.unsplash.com/photo-1662581872277-0fd0bf3ae8f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80"),) ,)
+              ],
+            ),
+
+          ),
         ),
       ),
     );
-  }//Fin del metodo build
-}//Fin del met
+  }//fin del metodo build
+}//Fin de la clase
