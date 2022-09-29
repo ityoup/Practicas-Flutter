@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tacos/tacos.dart';
+import 'package:tacos/galeria.dart';
 
 void main() => runApp(const MyApp());
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Tacos',
-      home: Tacos(),
+      home: Muestrario(),
     );
   }//Fin del metodo buil
 }//Fin de la aplicacion myapp
