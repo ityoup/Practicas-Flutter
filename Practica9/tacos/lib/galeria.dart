@@ -73,16 +73,33 @@ class Muestrario extends StatelessWidget {
                         MaterialPageRoute(
                           builder: (context) => Tacos(
                             imageRuta: _images[index].imageRuta,
-                            
-                          )
-                        ))
+                            producto: _images[index].producto,
+                            nombre: _images[index].nombre,
+                            precio: _images[index].precio,
+                            descripcionTitulo:
+                                _images[index].descripcionTitulo,
+                            descripcionDetallada:
+                            _images[index].descripcionDetallada,)));
                     },
-                  )
-                }
+                    child: Hero(
+                      tag: "logo",
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          image: DecorationImage(
+                            image: NetworkImage(_images[index].imageRuta),
+                            fit: BoxFit.cover,
+                          )
+                        ),
+                      ),
+                    ),
+                  );
+                },
+                itemCount: _images.length,
               ),
               ) 
               ),
-          )
+          
 
         ]
         )

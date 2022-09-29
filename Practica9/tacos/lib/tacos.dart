@@ -1,7 +1,23 @@
 import 'package:flutter/material.dart';
 
-class Tacos extends StatelessWidget {
-  const Tacos({super.key});
+
+class Tacos extends StatelessWidget{
+  final String imageRuta;
+  final String producto;
+  final String nombre;
+  final String precio;
+  final String descripcionTitulo;
+  final String descripcionDetallada;
+  const Tacos({
+    Key?key,
+    required this.imageRuta,
+    required this.producto,
+    required this.nombre,
+    required this.precio,
+    required this.descripcionTitulo,
+    required this.descripcionDetallada,
+  }) : super(key:key);  
+
 
   @override
   Widget build(BuildContext context) {
@@ -159,3 +175,4 @@ class Tacos extends StatelessWidget {
     );
   }//Fin del metodo build
 }//fin de la clase tacos
+
