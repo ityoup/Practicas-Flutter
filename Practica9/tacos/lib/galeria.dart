@@ -44,7 +44,7 @@ class Muestrario extends StatelessWidget {
         children: [
           SizedBox(height: 40),
           Text(
-            "Galeia",
+            "Menu",
             style: TextStyle(
               fontSize: 25, fontWeight: FontWeight.w500,
               color: Colors.white),
