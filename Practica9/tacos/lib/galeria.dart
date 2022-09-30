@@ -44,7 +44,7 @@ class Muestrario extends StatelessWidget {
         children: [
           SizedBox(height: 40),
           Text(
-            "Menu",
+            "Menu ",
             style: TextStyle(
               fontSize: 25, fontWeight: FontWeight.w500,
               color: Colors.white),
@@ -110,6 +110,7 @@ class Muestrario extends StatelessWidget {
 
 class ImageDetails{
   final String imageRuta;
+  
   final String producto;
   final String nombre;
   final String precio;
