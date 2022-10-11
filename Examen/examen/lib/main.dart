@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:examen/home.dart';
+import 'package:examen/drawer.dart';
 
 void main() => runApp(const MyApp());
 
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
           title: const Text('Lista de tareas',
           ),
         ),
-        body: Lista()
+        body: Lista(),
+        drawer: Back(),
       ),
     );
   }

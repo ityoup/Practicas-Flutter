@@ -16,17 +16,16 @@ const Divider(
         Container(
           width: MediaQuery.of(context).size.width * 0.50,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
             border: Border.all(
             color: Colors.black87,
         ),
       ),
       height: 350,
-      child: Text("Pendientes",
-      
-      textAlign: TextAlign.center,
+      child: Text("Hoy",
+      textAlign: TextAlign.left,
       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-      ), 
+      ),
+      
       ),
       const Divider(
           height: 40,
@@ -36,11 +35,11 @@ const Divider(
     Container(
       height: 350,
       child: Text("Por hacer",
-      textAlign: TextAlign.center,
+      textAlign: TextAlign.left,
       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
       ),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
+            // borderRadius: BorderRadius.circular(20),
             border: Border.all(
               color: Colors.black87,
         ),
@@ -55,11 +54,11 @@ const Divider(
 Container(
   height: 350,
       child: Text("Completadas",
-       textAlign: TextAlign.center,
+       textAlign: TextAlign.left,
       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
            ),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
+            // borderRadius: BorderRadius.circular(10),
             border: Border.all(
               color: Colors.black87,
         ),
