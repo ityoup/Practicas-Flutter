@@ -1,7 +1,6 @@
-import 'dart:ui';
-
+import 'package:anim_search_bar/anim_search_bar.dart';
+import 'package:examen/main.dart';
 import 'package:flutter/material.dart';
-
 
 class Back extends StatelessWidget {
   const Back({super.key});
@@ -23,8 +22,6 @@ class Back extends StatelessWidget {
       const Divider(
         height: 40,
       ),
-
-
 
         ListTile(
           title: Text("Comida Mexicana",
@@ -97,16 +94,134 @@ class Back extends StatelessWidget {
   }
 }
 
-//Aqui empieza la pagina 2
+
+
+//Aqui empieza la comida mexicana
 class Galeria extends StatelessWidget {
   const Galeria({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return ListView(
+      children: [
+
+        const Divider(
+          height: 20,
+          color: Colors.white,
+        ),
+        
+        FloatingActionButton(
+          child: CircleAvatar(
+            radius: 50,
+            backgroundImage: NetworkImage("https://images.unsplash.com/photo-1544982503-9f984c14501a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"),
+          ),
+          backgroundColor:Colors.green ,
+          onPressed:(){
+            Navigator.pop(context);
+          } 
+             
+          ),
+        Container(
+          margin: const EdgeInsets.all(30),
+          width: 8.0,
+          height: 300.0,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            image: DecorationImage(
+              
+              image: NetworkImage("https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"), 
+              fit: BoxFit.fill
+              ),
+            border: Border.all(
+            color: Colors.black87,    
+        ),
+      ),      
+      ),
+      Container(
+        margin: const EdgeInsets.symmetric(horizontal: 30),
+        decoration: BoxDecoration(
+          // border: Border.all(),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Text("Disfruta de un rico banquete, cargado con ricos cortes, de RibEye, New York y carne PRIME LOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFN",
+        style: TextStyle(fontSize: 14, color: Colors.black,
+        ),
+        
+        ),
+      ),
+
+      const Divider(
+        height: 20,
+        color: Colors.white,
+      ),
       
-      child: Text("Pagina para comida mexicana"),
+      Container(
+          margin: const EdgeInsets.all(30),
+          width: 8.0,
+          height: 300.0,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            image: DecorationImage(
+              image: NetworkImage("https://images.unsplash.com/photo-1604908554025-e477d54e85e0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"), 
+              fit: BoxFit.fill
+              ),
+            border: Border.all(
+            color: Colors.black87,    
+        ),
+      ),      
+      ),
+      Container(
+        margin: const EdgeInsets.symmetric(horizontal: 30),
+        decoration: BoxDecoration(
+          // border: Border.all(),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Text("Disfruta de un rico banquete, cargado con ricos cortes, de RibEye, New York y carne PRIME LOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFN",
+        style: TextStyle(fontSize: 14, color: Colors.black,
+        ),
+        
+        ),
+      ),
+
+      const Divider(
+        height: 20,
+        color: Colors.white,
+      ),
+
+Container(
+          margin: const EdgeInsets.all(30),
+          width: 8.0,
+          height: 300.0,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            image: DecorationImage(
+              image: NetworkImage("https://images.unsplash.com/photo-1529411081224-84ac0d0bf6ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"), 
+              fit: BoxFit.fill
+              ),
+            border: Border.all(
+            color: Colors.black87,    
+        ),
+      ),      
+      ),
+      Container(
+        margin: const EdgeInsets.symmetric(horizontal: 30),
+        decoration: BoxDecoration(
+          // border: Border.all(),
+          borderRadius: BorderRadius.circular(20),
+        ),
+
+        child: Text("Disfruta de un rico banquete, cargado con ricos cortes, de RibEye, New York y carne PRIME LOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFN",
+        style: TextStyle(fontSize: 14, color: Colors.black,
+        ),
+        
+        ),
+      ),
+      
+
+      ],
+      
     );
+
   }
 }
 
@@ -135,18 +250,87 @@ class GaleriaAmericana extends StatelessWidget {
       ),      
       ),
       Container(
-        margin: const EdgeInsets.all(30),
-        width: 8.0,
-        height: 300.0,
-        child: Text("New York",
-        style: TextStyle(fontSize: 14),
-        textAlign: TextAlign.center,
-        ),
+        margin: const EdgeInsets.symmetric(horizontal: 30),
         decoration: BoxDecoration(
-          border: Border.all()
+          // border: Border.all(),
+          borderRadius: BorderRadius.circular(20),
         ),
-      )
+
+        child: Text("Disfruta de un rico banquete, cargado con ricos cortes, de RibEye, New York y carne PRIME LOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFN",
+        style: TextStyle(fontSize: 14, color: Colors.black,
+        ),
         
+        ),
+      ),
+
+      const Divider(
+        height: 20,
+        color: Colors.white,
+      ),
+      
+      Container(
+          margin: const EdgeInsets.all(30),
+          width: 8.0,
+          height: 300.0,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            image: DecorationImage(
+              image: NetworkImage("https://images.unsplash.com/photo-1604908554025-e477d54e85e0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"), 
+              fit: BoxFit.fill
+              ),
+            border: Border.all(
+            color: Colors.black87,    
+        ),
+      ),      
+      ),
+      Container(
+        margin: const EdgeInsets.symmetric(horizontal: 30),
+        decoration: BoxDecoration(
+          // border: Border.all(),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Text("Disfruta de un rico banquete, cargado con ricos cortes, de RibEye, New York y carne PRIME LOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFN",
+        style: TextStyle(fontSize: 14, color: Colors.black,
+        ),
+        
+        ),
+      ),
+
+      const Divider(
+        height: 20,
+        color: Colors.white,
+      ),
+
+Container(
+          margin: const EdgeInsets.all(30),
+          width: 8.0,
+          height: 300.0,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            image: DecorationImage(
+              image: NetworkImage("https://images.unsplash.com/photo-1529411081224-84ac0d0bf6ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"), 
+              fit: BoxFit.fill
+              ),
+            border: Border.all(
+            color: Colors.black87,    
+        ),
+      ),      
+      ),
+      Container(
+        margin: const EdgeInsets.symmetric(horizontal: 30),
+        decoration: BoxDecoration(
+          // border: Border.all(),
+          borderRadius: BorderRadius.circular(20),
+        ),
+
+        child: Text("Disfruta de un rico banquete, cargado con ricos cortes, de RibEye, New York y carne PRIME LOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFN",
+        style: TextStyle(fontSize: 14, color: Colors.black,
+        ),
+        
+        ),
+      ),
+      
+
       ],
       
     );
@@ -159,10 +343,118 @@ class GaleriaAsiatica extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("Aqui empieza la comida asiatica"),
+    return ListView(
+      children: [
+        Container(
+          margin: const EdgeInsets.all(30),
+          width: 8.0,
+          height: 300.0,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            image: DecorationImage(
+              image: NetworkImage("https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"), 
+              fit: BoxFit.fill
+              ),
+            border: Border.all(
+            color: Colors.black87,    
+        ),
+      ),      
+      ),
+      Container(
+        margin: const EdgeInsets.symmetric(horizontal: 30),
+        decoration: BoxDecoration(
+          // border: Border.all(),
+          borderRadius: BorderRadius.circular(20),
+        ),
+
+        child: Text("Disfruta de un rico banquete, cargado con ricos cortes, de RibEye, New York y carne PRIME LOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFN",
+        style: TextStyle(fontSize: 14, color: Colors.black,
+        ),
+        
+        ),
+      ),
+
+      const Divider(
+        height: 20,
+        color: Colors.white,
+      ),
+      
+      Container(
+          margin: const EdgeInsets.all(30),
+          width: 8.0,
+          height: 300.0,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            image: DecorationImage(
+              image: NetworkImage("https://images.unsplash.com/photo-1604908554025-e477d54e85e0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"), 
+              fit: BoxFit.fill
+              ),
+            border: Border.all(
+            color: Colors.black87,    
+        ),
+      ),      
+      ),
+      Container(
+        margin: const EdgeInsets.symmetric(horizontal: 30),
+        decoration: BoxDecoration(
+          // border: Border.all(),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Text("Disfruta de un rico banquete, cargado con ricos cortes, de RibEye, New York y carne PRIME LOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFN",
+        style: TextStyle(fontSize: 14, color: Colors.black,
+        ),
+        
+        ),
+      ),
+
+      const Divider(
+        height: 20,
+        color: Colors.white,
+      ),
+
+Container(
+          margin: const EdgeInsets.all(30),
+          width: 8.0,
+          height: 300.0,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            image: DecorationImage(
+              image: NetworkImage("https://images.unsplash.com/photo-1529411081224-84ac0d0bf6ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"), 
+              fit: BoxFit.fill
+              ),
+            border: Border.all(
+            color: Colors.black87,    
+        ),
+      ),      
+      ),
+      Container(
+        margin: const EdgeInsets.symmetric(horizontal: 30),
+        decoration: BoxDecoration(
+          // border: Border.all(),
+          borderRadius: BorderRadius.circular(20),
+        ),
+
+        child: Text("Disfruta de un rico banquete, cargado con ricos cortes, de RibEye, New York y carne PRIME LOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFNLOEREWRSNDLKFNSDFNSKNDFNKSDFN",
+        style: TextStyle(fontSize: 14, color: Colors.black,
+        ),
+        
+        ),
+      ),
+      
+
+      ],
+      
     );
+      
   }
   
 }
 
+class MexicanaExpand extends StatelessWidget {
+  const MexicanaExpand({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
