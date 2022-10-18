@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       home: Scaffold(
         appBar: AppBar(
+          backgroundColor: Color.fromARGB(255, 166, 35, 25),
           actions: <Widget>[
             IconButton(
               icon: Icon(
