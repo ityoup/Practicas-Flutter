@@ -1,4 +1,4 @@
-import 'dart:html';
+// import 'dart:html';
 
 import 'package:flutter/material.dart';
 
@@ -27,6 +27,7 @@ class loginPage extends StatelessWidget {
         body: Form(
           child: Container(
             decoration: BoxDecoration(
+
               color: isDesktop(context) ? Colors.blue[300] : Colors.amber[800],
               borderRadius: BorderRadius.circular(100),
               boxShadow: [
@@ -49,13 +50,75 @@ class loginPage extends StatelessWidget {
                       const Text("Hola Flutter"),
                       Text("ancho de tu pantalla: " + ancho.toString())
                     ],)
+                    ),
+                    Expanded(child: ListView(
+                      shrinkWrap: true,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 80, vertical: 10),
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                              fillColor: Colors.white,
+                              filled: true,
+                              labelText: "Email/Mobile",
+                              labelStyle: TextStyle(
+                                color: Colors.black,
+                                fontSize: 13,
+                              ),
+                              prefixIcon: Icon(Icons.mail),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                borderSide: BorderSide(color: Colors.red,
+                                width: 0.1)
+                              ),
+
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                borderSide: BorderSide(color: Colors.red,
+                                width: 0.1
+                                )
+                              ),
+                            ),
+                          ),
+                          ),
+                      ],
+                    ),
                     )
                   ],
                   ),
                   if(isMobile(context))
                   Column(children: [
                     SizedBox(height: 80),
-                    Image.asset("assets/img/FlutterCel.png")
+                    Image.asset("assets/img/FlutterCel.png"),
+
+                  Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 90),
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                              fillColor: Colors.white,
+                              filled: true,
+                              labelText: "Email/Mobile",
+                              labelStyle: TextStyle(
+                                color: Colors.black,
+                                fontSize: 13,
+                              ),
+                              prefixIcon: Icon(Icons.mail),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                borderSide: BorderSide(color: Colors.red,
+                                width: 0.1)
+                              ),
+
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                borderSide: BorderSide(color: Colors.red,
+                                width: 0.1
+                                )
+                              ),
+                            ),
+                          ),
+                          ),
+
                   ],)
                 ],
               ),
